@@ -1,0 +1,44 @@
+{
+    "displayName": "Baysky",
+    "blocks": [
+        {
+            "id": "aaac5vicl6wro",
+            "type": "input",
+            "inputType": "firehose",
+            "firehoseSeconds": 10800
+        },
+        {
+            "id": "aaac5vicl7kb4",
+            "type": "remove",
+            "subject": "language",
+            "value": null
+        },
+        {
+            "type": "remove",
+            "subject": "item",
+            "value": null,
+            "id": "aaaddlkracaj4",
+            "labels": []
+        },
+        {
+            "id": "aaac5vicl43ji",
+            "type": "regex",
+            "value": "#(?:SF|SanFrancisco|BayArea|Frisco|sfpol)\\b|(?:San Francisco|Oakland|SFMTA|SFO|Bay Area|sfba.social|Berkeley)\\b",
+            "caseSensitive": false,
+            "target": "text|alt_text"
+        },
+        {
+            "type": "regex",
+            "value": "#(?:scifi|streetfighter|fantasy)\\b",
+            "caseSensitive": false,
+            "id": "aaac5x4azompk",
+            "invert": true
+        },
+        {
+            "id": "aaac5vicl5ur4",
+            "type": "sort",
+            "sortType": "created_at"
+        }
+    ],
+    "license": "EUPL-1.2"
+}
